@@ -35,7 +35,7 @@
         },
         headerTitle: function () {return '<strong>Visualization in Plugin</strong>'},
         contentAjax: {
-            url: window.location.href.replace(/\\\/+$/,'')+'/static/interface.html',
+            url: document.getElementById("iframeShiny").getAttribute("src").split("?")[0] + 'static/interface.html',
             done: function (panel) {
                    setInnerHTML(panel.content, this.responseText);
             }
